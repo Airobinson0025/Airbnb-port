@@ -4,6 +4,7 @@ import { useRouter} from 'next/router'
 import { format }  from 'date-fns'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import InfoCard from './components/InfoCard'
 
 const Search = () => {
     const router = useRouter();
@@ -110,6 +111,10 @@ const Search = () => {
                     <p className='button'>Rooms and Beds</p>
                     <p className='button'>More Filters</p>
                 </div>
+
+                {searchResults.map(searchResults => (
+                    <InfoCard key={searchResults.id}/>
+                ))}
             </section>
         </main>
 
