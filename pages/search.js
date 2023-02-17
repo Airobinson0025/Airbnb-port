@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useRouter} from 'next/router'
-import { format }  from 'date-fns'
+import { format, parseISO}  from 'date-fns'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import InfoCard from './components/InfoCard'
@@ -10,8 +10,8 @@ import ReactMap from './components/ReactMap'
 const Search = () => {
     const router = useRouter();
     const { location, startDate, endDate, noOfGuests } = router.query;
-    const formattedStartDate = format(new Date(startDate), 'dd MMMM yyyy');
-    const formattedEndDate = format(new Date(endDate), 'dd MMMM yyyy');
+    const formattedStartDate = startDate && format(new Date(startDate), 'dd MMMM yyyy');
+    const formattedEndDate = endDate && format(new Date(endDate), 'dd MMMM yyyy');
     const range = `${formattedStartDate} - ${formattedEndDate}`;
 
     const searchResults = [

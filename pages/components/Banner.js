@@ -6,9 +6,9 @@ const Banner = () => {
     <div className='relative h-[300px] sm:h-[400px] lg:[500px] xl:h-[600px] 2xl:h-[700px]'>
         <Image
         src='https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/previewImage/PowerfulReasons_hero.jpg'
-        layout='fill'
         alt='banner img'
-        objectFit='cover'
+        layout='fill'
+        
         />
         <div className='absolute top-1/2 w-full text-center font-semibold'>
             <p className='text-md sm:text-lg'>Not sure where to go? Perfect.</p>
