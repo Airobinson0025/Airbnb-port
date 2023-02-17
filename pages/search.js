@@ -5,7 +5,7 @@ import { format, parseISO}  from 'date-fns'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import InfoCard from './components/InfoCard'
-import ReactMap from './components/ReactMap'
+
 
 const Search = () => {
     const router = useRouter();
